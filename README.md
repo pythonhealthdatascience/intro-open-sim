@@ -5,7 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/ORCID-0000--0001--5274--5037-brightgreen)](https://orcid.org/0000-0001-5274-5037)
 [![License: MIT](https://img.shields.io/badge/ORCID-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481)
 
-#  Towards Sharing Tools and Artifacts for **Reproducible** Simulation **(v1.5)**: a JuypterLite template for `simpy` models
+#  An introduction to Discrete-Event Simulation using Free and Open Source Software.
+
+> Work in progress.  This is a STARS project being prepared for [SW25](https://www.theorsociety.com/ORS/ORS/Events/2025/Simulation-Workshop/SW25.aspx)
 
 ## 1. Overview
 
