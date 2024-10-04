@@ -10,3 +10,4 @@ dependencies:
   - numpy<2
   - pandas
   - matplotlib
+  - ipykernel
