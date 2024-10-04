@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Simpy JupyterLite Template
+title: An introduction to Discrete-Event Simulation using Free and Open Source Software
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
@@ -16,8 +16,15 @@ authors:
     family-names: Harper
     affiliation: University of Exeter
     orcid: 'https://orcid.org/0000-0001-5274-5037'
+  - given-names: Amy
+    family-names: Heather
+    affiliation: University of Exeter
+    orcid: 'https://orcid.org/0000-0002-6596-3479'
 repository-code: >-
-  https://github.com/pythonhealthdatascience/stars-simpy-jupterlite
+  https://github.com/pythonhealthdatascience/intro-open-sim
+abstract: >-
+  This is a STARS project being prepared for the Operational Research Society
+  12th Simulation Workshop in 2025 (SW25).
 keywords:
   - simpy
   - jupyterlite
