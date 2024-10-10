@@ -1,0 +1,9 @@
+name: simpy_tutorial
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - simpy=4.1.1
+  - numpy<2
+  - pandas=1.5.3
+  - matplotlib=3.8.4
