@@ -38,11 +38,36 @@ This tutorial has been set up to run on your browser without the need to install
 
 ### 2.2 Running notebooks locally on your machine
 
-You can also run the notebooks in `content/` locally on your machine. You'll need to install the provided conda environment `environment.yml`.
+#### 2.2.1 Downloading the code
+
+Either clone the repository using git or click on the green "code" button and select "Download Zip".
+
+```bash
+git clone https://github.com/pythonhealthdatascience/intro-open-sim.git
+```
+
+#### 2.2.2 Installing dependencies and running JupyterLab
+
+All dependencies can be found in [`binder/environment.yml`]() and are pulled from conda-forge.  To run the code locally, we recommend installing [miniforge](https://github.com/conda-forge/miniforge);
+
+> miniforge is FOSS alternative to Anaconda and miniconda that uses conda-forge as the default channel for packages. It installs both conda and mamba (a drop in replacement for conda) package managers.  We recommend mamba for faster resolving of dependencies and installation of packages. 
+
+navigating your terminal (or cmd prompt) to the directory containing the repo and issuing the following command:
 
 ```
-conda env create --name xeus-python-kernel --file environment.yml
-conda activate xeus-python-kernel
+mamba env create -f binder/environment.yml
+```
+
+Activate the mamba environment using the following command:
+
+```
+mamba activate simpy_tutorial
+```
+
+You can then run the notebooks in `content/` locally on your machine using JupyterLab.  Issue the following command and JupyterLab will open in your browser. Notebooks are in the `content/` directory.
+
+```
+jupyter-lab
 ```
 
 ## 📝 3. Citation
