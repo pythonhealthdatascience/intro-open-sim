@@ -7,11 +7,11 @@
 
 #  An introduction to Discrete-Event Simulation (DES) using Free and Open Source Software
 
-> Work in progress.  This is a STARS project being prepared for the [Operational Research Society 12th Simulation Workshop in 2025 (SW25)](https://www.theorsociety.com/ORS/ORS/Events/2025/Simulation-Workshop/SW25.aspx). It has been adapted from our [template repository](https://github.com/pythonhealthdatascience/stars-simpy-jupterlite) for sharing `simpy` models with JupyterLite.
+> Work in progress.  This is tutorial was initially prepared for the [Operational Research Society 12th Simulation Workshop in 2025 (SW25)](https://www.theorsociety.com/ORS/ORS/Events/2025/Simulation-Workshop/SW25.aspx). It has been adapted from our [template repository](https://github.com/pythonhealthdatascience/stars-simpy-jupterlite) for sharing `simpy` models with JupyterLite.
 
 ## 🧑‍💻 1. Tutorial
 
-We being with two notebooks that introduce some basic concepts for creating DES in python:
+We begin with two notebooks that introduce some basic concepts for creating DES in python:
 
 * `01_sampling.ipynb`: Sampling from statistical distributions using `numpy`
 * `02_basic_simpy.ipynb`: Creating simple `simpy` DES models that make use of `numpy` sampling
@@ -72,7 +72,22 @@ jupyter-lab
 
 ## 📝 3. Citation
 
-TBC.
+```bibtex
+@software{open_sim_tutorial,
+  author       = {Monks, Thomas and
+                  Harper, Alison and
+                  Heather, Amy},
+  title        = {An introduction to Discrete-Event Simulation using
+                   Free and Open Source Software.
+                  },
+  month        = oct,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.13971859},
+  url          = {https://doi.org/10.5281/zenodo.13971859},
+}
+```
 
 ## 🤝 4. Acknowledgements
 
