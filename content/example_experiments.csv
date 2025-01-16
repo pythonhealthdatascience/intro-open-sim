@@ -1,0 +1,5 @@
+id,experiment,n_operators,mean_iat
+0,base,13,0.6
+1,op+1,14,0.6
+2,high_demand,13,0.55
+3,combination,14,0.55
