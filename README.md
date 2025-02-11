@@ -25,6 +25,11 @@ We then move on to some more advanced concepts, and create a full process model:
 
 * `04_111_model.ipynb`: Full `simpy` process model, creating a model for a 111 call centre 
 * `05_basic_results.ipynb`: Collecting results from a single run by storing process metrics during a run and performing calculations at the end
+* `06a_basic_results_exercise.ipynb`: An exercise to practice collecting results from a `simpy` model.
+* `07_experiments.ipynb`: our approach to setting up a model for multiple replications, experimentatation, and common random numbers
+* `08_full_model.ipynb`: an extended version of the 111 call centre process. We also introduce a warm-up period
+* `09_time_weighted_calcs.ipynb`: An alternative approach to collects results for queue length and resource utilisation.
+
 
 ## 🔧 2. Set-up
 
