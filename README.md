@@ -1,9 +1,12 @@
 [![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://pythonhealthdatascience.github.io/intro-open-sim/lab/index.html)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pythonhealthdatascience/intro-open-sim/HEAD?urlpath=%2Fdoc%2Ftree%2Fcontent%2F01_sampling.ipynb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![ORCID: Alison Harper](https://img.shields.io/badge/ORCID:_Alison_Harper-0000--0001--5274--5037-brightgreen)](https://orcid.org/0000-0001-5274-5037)
 [![ORCID: Tom Monks](https://img.shields.io/badge/ORCID:_Tom_Monks-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481)
 [![ORCID: Amy Heather](https://img.shields.io/badge/ORCID:_Amy_Heather-0000--0002--6596--3479-brightgreen)](https://orcid.org/0000-0002-6596-3479)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13971858.svg)](https://doi.org/10.5281/zenodo.13971858)
+
 
 #  An introduction to Discrete-Event Simulation (DES) using Free and Open Source Software
 
@@ -26,7 +29,7 @@ We then move on to some more advanced concepts, and create a full process model:
 * `04_111_model.ipynb`: Full `simpy` process model, creating a model for a 111 call centre 
 * `05_basic_results.ipynb`: Collecting results from a single run by storing process metrics during a run and performing calculations at the end
 * `06a_basic_results_exercise.ipynb`: An exercise to practice collecting results from a `simpy` model.
-* `07_experiments.ipynb`: our approach to setting up a model for multiple replications, experimentatation, and common random numbers
+* `07_experiments.ipynb`: our approach to setting up a model for multiple replications, experimentation, and common random numbers
 * `08_full_model.ipynb`: an extended version of the 111 call centre process. We also introduce a warm-up period
 * `09_time_weighted_calcs.ipynb`: An alternative approach to collects results for queue length and resource utilisation.
 
@@ -88,7 +91,7 @@ jupyter-lab
   month        = oct,
   year         = 2024,
   publisher    = {Zenodo},
-  version      = {v0.1.0},
+  version      = {v0.2.0},
   doi          = {10.5281/zenodo.13971859},
   url          = {https://doi.org/10.5281/zenodo.13971859},
 }
