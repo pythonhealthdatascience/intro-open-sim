@@ -10,7 +10,7 @@
 
 #  An introduction to Discrete-Event Simulation (DES) using Free and Open Source Software
 
-> Work in progress.  This is tutorial was initially prepared for the [Operational Research Society 12th Simulation Workshop in 2025 (SW25)](https://www.theorsociety.com/ORS/ORS/Events/2025/Simulation-Workshop/SW25.aspx). It has been adapted from our [template repository](https://github.com/pythonhealthdatascience/stars-simpy-jupterlite) for sharing `simpy` models with JupyterLite.
+> Work in progress.  This is tutorial was initially prepared for the [Operational Research Society 12th Simulation Workshop in 2025 (SW25)](https://www.theorsociety.com/ORS/ORS/Events/2025/Simulation-Workshop/SW25.aspx). It has been adapted from our [template repository](https://github.com/pythonhealthdatascience/stars-simpy-jupterlite) for sharing `simpy` models with JupyterLite.  The SW25 tutorial paper is now open access CC-BY 4.0: [https://doi.org/10.36819/SW25.004](https://doi.org/10.36819/SW25.004)
 
 ## 🧑‍💻 1. Tutorial
 
