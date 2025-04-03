@@ -80,6 +80,25 @@ jupyter-lab
 
 ## 📝 3. Citation
 
+If the work is of use to you we would value a citation!  Please cite the [SW25 tutorial paper](https://doi.org/10.36819/SW25.004) and the code repository.
+
+```bibtex
+@inproceedings{monks2025building,
+  title={Building Healthcare Discrete-Event Simulation Models in Free and Open Source Software: An Introductory Tutorial},
+  author={Monks, Thomas and
+          Harper, Alison and
+          Heather, Amy and
+          Mayne, Andrew and
+          Mustafee, Navonil},
+  booktitle={Proceedings of the Operational Research Society Simulation Workshop 2025 (SW25)},
+  editor={Luis, M. and Harper, A. and Monks, T. and Mustafee, N.},
+  year={2025},
+  doi={10.36819/SW25.004},
+  url={https://doi.org/10.36819/SW25.004},
+  organization={Operational Research Society}
+}
+```
+
 ```bibtex
 @software{open_sim_tutorial,
   author       = {Monks, Thomas and
