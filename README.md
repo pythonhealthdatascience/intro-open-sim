@@ -84,7 +84,8 @@ If the work is of use to you we would value a citation!  Please cite the [SW25 t
 
 ```bibtex
 @inproceedings{monks2025building,
-  title={Building Healthcare Discrete-Event Simulation Models in Free and Open Source Software: An Introductory Tutorial},
+  title={Building Healthcare Discrete-Event Simulation Models
+         in Free and Open Source Software: An Introductory Tutorial},
   author={Monks, Thomas and
           Harper, Alison and
           Heather, Amy and
