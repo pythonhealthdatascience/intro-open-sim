@@ -357,15 +357,3 @@ class Experiment:
         self.results["nurse_waiting_times"] = []
         self.results["total_nurse_call_duration"] = 0.0
 
-def trace(msg):
-    """
-    Turing printing of events on and off.
-
-    Params:
-    -------
-    msg: str
-        string to print to screen.
-    """
-    if TRACE:
-        print(msg)
-
