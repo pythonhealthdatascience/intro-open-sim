@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Dates formatted as YYYY-MM-DD as per [ISO standard](https://www.iso.org/iso-8601-date-and-time-format.html).
 
+## Unreleased
+
+## Added
+
+* `10_multiple_arrival_processes.ipynb`: simulating multiple arrivals classes each with their own distribution
+* `11_blocking.ipynb`: simulating the blocking of one resource while queuing for another.
+* `distributions.py`: module containing some distributions to reduce code in notebooks.
+
 ## [v0.2.0 - 11/02/2024](https://github.com/pythonhealthdatascience/intro-open-sim/releases/tag/v0.2.0) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14849934.svg)](https://doi.org/10.5281/zenodo.14849934)
 
 Simulation workshop 2025 release. Additional notebooks to respond to reviewers requests.
