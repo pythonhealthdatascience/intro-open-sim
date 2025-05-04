@@ -1,3 +1,7 @@
+"""
+Distribution and utility classes avilable to these examples.
+"""
+
 import numpy as np
 from typing import Optional, Union, Tuple
 from numpy.random import SeedSequence
