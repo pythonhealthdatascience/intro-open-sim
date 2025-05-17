@@ -141,3 +141,47 @@ class Exponential:
         float or np.ndarray (if size >=1)
         """
         return self.rand.exponential(self.mean, size=size)
+
+
+class Bernoulli:
+    """
+    Convenience class for the Bernoulli distribution.
+    packages up distribution parameters, seed and random generator.
+
+    The Bernoulli distribution is a special case of the binomial distribution
+    where a single trial is conducted
+
+    Use the Bernoulli distribution to sample success or failure.
+    """
+
+    def __init__(self, p, random_seed=None):
+        """
+        Constructor
+
+        Params:
+        ------
+        p: float
+            probability of drawing a 1
+
+        random_seed: int | SeedSequence, optional (default=None)
+            A random seed to reproduce samples.  If set to none then a unique
+            sample is created.
+        """
+        self.rand = np.random.default_rng(seed=random_seed)
+        self.p = p
+
+    def sample(self, size=None):
+        """
+        Generate a sample from the exponential distribution
+
+        Params:
+        -------
+        size: int, optional (default=None)
+            the number of samples to return.  If size=None then a single
+            sample is returned.
+
+        Returns:
+        -------
+        float or np.ndarray (if size >=1)
+        """
+        return self.rand.binomial(n=1, p=self.p, size=size)
