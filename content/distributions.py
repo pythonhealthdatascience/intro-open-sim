@@ -3,9 +3,9 @@ Distribution and utility classes avilable to these examples.
 """
 
 import numpy as np
-from typing import Optional, Union, Tuple
+from typing import Optional, Union, Tuple, Any
 from numpy.random import SeedSequence
-from numpy.typing import NDArray
+from numpy.typing import NDArray, ArrayLike
 import math
 
 class Lognormal:
@@ -185,3 +185,198 @@ class Bernoulli:
         float or np.ndarray (if size >=1)
         """
         return self.rand.binomial(n=1, p=self.p, size=size)
+
+class DiscreteEmpirical:
+    """
+    DiscreteEmpirical distribution implementation.
+
+    A probability distribution that samples values with specified frequencies.
+    Useful for modeling categorical data or discrete outcomes with known
+    probabilities.
+
+    Example uses:
+    -------------
+    1. Routing percentages
+    2. Classes of entity
+    3. Batch sizes of arrivals
+    4. Initial conditions - no. entities in a queue.
+    """
+
+    def __init__(
+        self,
+        values: ArrayLike,
+        freq: ArrayLike,
+        random_seed: Optional[Union[int, SeedSequence]] = None,
+    ):
+        """
+        Initialize a discrete distribution.
+
+        Parameters
+        ----------
+        values : ArrayLike
+            List of possible outcome values. Must be of equal length to freq.
+
+        freq : ArrayLike
+            List of observed frequencies or probabilities. Must be of equal
+            length to values. These will be normalized to sum to 1.
+
+        random_seed : Optional[Union[int, SeedSequence]], default=None
+            A random seed or SeedSequence to reproduce samples. If None, a
+            unique sample sequence is generated.
+
+        Raises
+        ------
+        TypeError
+            If values or freq are not positive arrays
+        ValueError
+            If values and freq have different lengths.
+        """
+
+        # convert to array first
+        self.values = np.asarray(values)
+        self.freq = np.asarray(freq)
+
+        if len(self.values) != len(self.freq):
+            raise ValueError(
+                "values and freq arguments must be of equal length"
+            )
+
+        self.rng = np.random.default_rng(random_seed)
+        self.probabilities = self.freq / self.freq.sum()
+
+    def __repr__(self):
+        values_repr = (
+            str(self.values.tolist())
+            if len(self.values) < 4
+            else f"[{', '.join(str(x) for x in self.values[:3])}, ...]"
+        )
+        freq_repr = (
+            str(self.freq.tolist())
+            if len(self.freq) < 4
+            else f"[{', '.join(str(x) for x in self.freq[:3])}, ...]"
+        )
+        return f"Discrete(values={values_repr}, freq={freq_repr})"
+
+    def sample(
+        self, size: Optional[Union[int, Tuple[int, ...]]] = None
+    ) -> Union[Any, NDArray]:
+        """
+        Generate random samples from the discrete distribution.
+
+        Parameters
+        ----------
+        size : Optional[Union[int, Tuple[int, ...]]], default=None
+            The number/shape of samples to generate:
+            - If None: returns a single sample
+            - If int: returns a 1-D array with that many samples
+            - If tuple of ints: returns an array with that shape
+
+        Returns
+        -------
+        Union[Any, NDArray]
+            Random samples from the discrete distribution:
+            - A single value (of whatever type was in the values array) when
+              size is None
+            - A numpy array of values with shape determined by size parameter
+        """
+        sample = self.rng.choice(self.values, p=self.probabilities, size=size)
+
+        if size is None:
+            return sample.item()
+        return sample
+
+class FixedDistribution:
+    """
+    Fixed distribution implementation.
+
+    A degenerate distribution that always returns the same fixed value.
+    Useful for constants or deterministic parameters in models.
+
+    Provides a method to
+    sample a constant value regardless of the number of samples requested.
+    """
+
+    def __init__(self, value: float):
+        """
+        Initialize a fixed distribution.
+
+        Parameters
+        ----------
+        value : float
+            The constant value that will be returned by sampling.
+        """
+        self.value = value
+
+    def __repr__(self):
+        return f"FixedDistribution(value={self.value})"
+
+    def sample(
+        self, size: Optional[Union[int, Tuple[int, ...]]] = None
+    ) -> Union[float, NDArray[np.float64]]:
+        """
+        Generate "samples" from the fixed distribution (always the same value).
+
+        Parameters
+        ----------
+        size : Optional[Union[int, Tuple[int, ...]]], default=None
+            The number/shape of samples to generate:
+            - If None: returns the fixed value as a float
+            - If int: returns a 1-D array filled with the fixed value
+            - If tuple of ints: returns an array with that shape filled with
+              the fixed value
+
+        Returns
+        -------
+        Union[float, NDArray[np.float64]]
+            The fixed value:
+            - A single float when size is None
+            - A numpy array filled with the fixed value with shape
+              determined by size parameter
+        """
+        if size is not None:
+            return np.full(size, self.value)
+        return self.value
+
+class Bernoulli:
+    """
+    Convenience class for the Bernoulli distribution.
+    packages up distribution parameters, seed and random generator.
+
+    The Bernoulli distribution is a special case of the binomial distribution
+    where a single trial is conducted
+
+    Use the Bernoulli distribution to sample success or failure.
+    """
+
+    def __init__(self, p, random_seed=None):
+        """
+        Constructor
+
+        Params:
+        ------
+        p: float
+            probability of drawing a 1
+
+        random_seed: int | SeedSequence, optional (default=None)
+            A random seed to reproduce samples.  If set to none then a unique
+            sample is created.
+        """
+        self.rand = np.random.default_rng(seed=random_seed)
+        self.p = p
+
+    def sample(self, size=None):
+        """
+        Generate a sample from the exponential distribution
+
+        Params:
+        -------
+        size: int, optional (default=None)
+            the number of samples to return.  If size=None then a single
+            sample is returned.
+
+        Returns:
+        -------
+        float or np.ndarray (if size >=1)
+        """
+        return self.rand.binomial(n=1, p=self.p, size=size)
+
