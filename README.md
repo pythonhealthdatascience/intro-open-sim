@@ -30,6 +30,8 @@ We then move on to some more advanced concepts, and create a full process model:
 * `05_basic_results.ipynb`: Collecting results from a single run by storing process metrics during a run and performing calculations at the end
 * `06a_basic_results_exercise.ipynb`: An exercise to practice collecting results from a `simpy` model.
 * `07_experiments.ipynb`: our approach to setting up a model for multiple replications, experimentation, and common random numbers
+* `07a_exercise.ipynb`: An exercise to practice using an `Experiment` class with a model
+* `07b_solutions.ipynb` Solutions to the `Experiment` exercises.
 * `08_full_model.ipynb`: an extended version of the 111 call centre process. We also introduce a warm-up period
 * `09_time_weighted_calcs.ipynb`: An alternative approach to collects results for queue length and resource utilisation.
 
