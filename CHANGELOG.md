@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `12_arrival_classes.ipynb`: simulate unique processes for different classes of arrival to the model.
 * `distributions.py`: module containing some distributions to reduce code in notebooks.
 * `basic_model.py`: contains a single activity version of the call centre model to use with `07_exercise.ipynb`
+* `13_warm_up.ipynb`: contains explanation of implementing warm up
+* `14_initial_conditions.ipynb`: contains explanation of manually setting up processes before a model is run
+* `15_resource_store.ipynb`: introduction to `Store` and `FilterStore` for advanced resource modelling
+* `sim_utility.py`: added `trace`, `set_trace`, and `spawn_seeds` functions to use across notebooks.
 
 ## [v0.2.0 - 11/02/2024](https://github.com/pythonhealthdatascience/intro-open-sim/releases/tag/v0.2.0) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14849934.svg)](https://doi.org/10.5281/zenodo.14849934)
 
