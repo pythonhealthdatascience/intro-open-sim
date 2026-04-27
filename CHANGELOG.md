@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `14_initial_conditions.ipynb`: contains explanation of manually setting up processes before a model is run
 * `15_resource_store.ipynb`: introduction to `Store` and `FilterStore` for advanced resource modelling
 * `sim_utility.py`: added `trace`, `set_trace`, and `spawn_seeds` functions to use across notebooks.
+* `16_time_dependent_arrivals.ipynb` to introduce the thinning algorithm and using it with `simpy`.
 
 ## [v0.2.0 - 11/02/2024](https://github.com/pythonhealthdatascience/intro-open-sim/releases/tag/v0.2.0) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14849934.svg)](https://doi.org/10.5281/zenodo.14849934)
 
